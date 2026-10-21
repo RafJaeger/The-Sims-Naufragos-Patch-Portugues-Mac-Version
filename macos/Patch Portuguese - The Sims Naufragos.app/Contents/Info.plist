@@ -7,7 +7,7 @@
     <key>CFBundleExecutable</key>
     <string>Patch-Portuguese-Naufragos</string>
     <key>CFBundleIconFile</key>
-    <string>Sims2.icns</string>
+    <string>Castaway.icns</string>
     <key>CFBundleIdentifier</key>
     <string>org.patchportuguese.naufragos</string>
     <key>CFBundleInfoDictionaryVersion</key>
