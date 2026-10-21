@@ -1,6 +1,7 @@
 build/
 work/
 .DS_Store
+._*
 
 # O jogo e suas mídias não fazem parte deste repositório.
 *.dmg

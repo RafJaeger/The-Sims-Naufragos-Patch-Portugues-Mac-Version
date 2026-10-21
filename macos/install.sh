@@ -3,11 +3,11 @@
 set -eu
 
 SCRIPT_DIRECTORY="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)"
-SOURCE_APP="$SCRIPT_DIRECTORY/Patch Portuguese - The Sims Naufragos.app"
-DESTINATION="${PATCH_PORTUGUESE_DEST:-$HOME/Desktop/Patch Portuguese - The Sims Naufragos.app}"
+SOURCE_APP="$SCRIPT_DIRECTORY/../The Sims Naufragos PT.app"
+DESTINATION="${PATCH_PORTUGUESE_DEST:-$HOME/Desktop/The Sims Naufragos PT.app}"
 
 if [ ! -d "$SOURCE_APP" ]; then
-    echo "Erro: o pacote Patch Portuguese - The Sims Naufragos.app não foi encontrado." >&2
+    echo "Erro: o pacote The Sims Naufragos PT.app não foi encontrado." >&2
     exit 1
 fi
 
@@ -19,6 +19,6 @@ fi
 
 /bin/mkdir -p "$(dirname "$DESTINATION")"
 /usr/bin/ditto --rsrc "$SOURCE_APP" "$DESTINATION"
-/bin/chmod 755 "$DESTINATION/Contents/MacOS/Patch-Portuguese-Naufragos"
+/bin/chmod 755 "$DESTINATION/Contents/MacOS/applet"
 
 echo "Instalado em: $DESTINATION"

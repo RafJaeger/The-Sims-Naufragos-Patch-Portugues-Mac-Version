@@ -1,102 +1,81 @@
-# The sims Naufragos Patch Portugues Mac Version
+# The Sims Naufragos PT — Mac OS X
 
-Iniciador compartilhável para o **The Sims Castaway Stories (Náufragos)** para
-Mac OS X. O iniciador pede ao aplicativo do jogo para carregar o idioma
-`Portuguese` sem substituir o aplicativo original, sem alterar arquivos do
-sistema e sem incluir arquivos do jogo.
+Iniciador para abrir o **The Sims Castaway Stories (Náufragos)** em português
+no Mac OS X. O aplicativo é separado, não substitui o jogo original e não
+altera arquivos do sistema.
 
 > Compatibilidade validada experimentalmente em um MacBook2,1 com Mac OS X Lion
-> 10.7. O comportamento pode variar conforme a edição do jogo e os recursos de
-> idioma instalados.
+> 10.7. O resultado depende dos recursos de idioma presentes na instalação do
+> jogo.
+
+## Como usar
+
+1. Baixe este repositório pelo botão **Code > Download ZIP**.
+2. Extraia o ZIP.
+3. Dentro da pasta extraída, localize **The Sims Naufragos PT.app** e arraste-o
+   para a Mesa ou para Aplicativos.
+4. Dê dois cliques no aplicativo.
+
+O iniciador procura o jogo nos locais mais comuns. Se não encontrar, abre uma
+janela para você selecionar o **The Sims Castaway Stories.app**. Essa escolha
+fica salva para as próximas execuções.
+
+O aplicativo pode ficar em qualquer lugar. O jogo pode estar em outro local,
+desde que seja selecionado na primeira execução.
+
+## O que ele faz
+
+- abre o `The Sims Castaway Stories.app` com o argumento `-l:Portuguese`;
+- mantém o jogo original intacto;
+- não instala arquivos no sistema;
+- não inclui arquivos do jogo;
+- funciona com instalações que já contenham os recursos de idioma em português.
+
+Se a instalação não tiver os recursos portugueses, o iniciador não consegue
+criar a tradução sozinho e o jogo pode continuar em inglês.
+
+O iniciador também não remove a exigência de mídia do jogo. Se o The Sims
+Castaway Stories pedir o disco, é necessário inserir a mídia correspondente ou
+usar uma instalação que já funcione sem essa exigência; o iniciador não modifica
+o executável original.
 
 ## Demonstração
 
-Captura real do The Sims Castaway Stories funcionando em português:
+Captura do jogo em português:
 
 ![The Sims Castaway Stories em português](docs/images/castaway-portuguese.png)
 
-## O que este projeto faz
+## Uso manual pelo Terminal
 
-- instala um aplicativo separado chamado **Patch Portuguese - The Sims Naufragos**;
-- abre o `The Sims Castaway Stories.app` com o argumento `-l:Portuguese`;
-- permite iniciar manualmente pelo Terminal, sem instalar o app;
-- mantém o jogo original intacto;
-- funciona com instalações que já contenham os recursos de idioma em português.
-
-O parâmetro foi testado na instalação usada no desenvolvimento. Se a instalação
-de outra pessoa não tiver os recursos portugueses, o iniciador não consegue
-criar a tradução sozinho e o jogo pode continuar em inglês.
-
-## Instalação no Mac
-
-### 1. Requisitos
-
-- The Sims Castaway Stories para Mac instalado;
-- Mac OS X 10.7 ou posterior;
-- acesso ao Terminal apenas para a instalação inicial.
-
-### 2. Baixar o projeto
-
-No Terminal:
-
-```sh
-git clone https://github.com/RafJaeger/The-Sims-Naufragos-Patch-Portugues-Mac-Version.git
-cd The-Sims-Naufragos-Patch-Portugues-Mac-Version
-```
-
-### 3. Instalar o iniciador na Mesa
-
-```sh
-sh macos/install.sh
-```
-
-Por padrão, ele instala somente o iniciador em:
-
-```text
-~/Desktop/Patch Portuguese - The Sims Naufragos.app
-```
-
-Depois, abra pelo Finder ou pelo Terminal:
-
-```sh
-open "$HOME/Desktop/Patch Portuguese - The Sims Naufragos.app"
-```
-
-### 4. Testar diretamente pelo Terminal
-
-Sem instalar o iniciador, o jogo pode ser aberto assim:
+Quem preferir iniciar manualmente pode usar:
 
 ```sh
 open "/Applications/The Sims Castaway Stories.localized/The Sims Castaway Stories.app" --args "-l:Portuguese"
 ```
 
-### 5. Se o jogo estiver em outro local
+Para outra localização, substitua o caminho pelo local correto do jogo.
+
+## Instalação opcional pelo Terminal
+
+O repositório também mantém um instalador para copiar somente o aplicativo
+para a Mesa:
 
 ```sh
-PATCH_PORTUGUESE_CASTAWAY_PATH="/caminho/The Sims Castaway Stories.app" \
-  open "$HOME/Desktop/Patch Portuguese - The Sims Naufragos.app"
+sh macos/install.sh
 ```
 
-## Instalação em `/Applications`
+Por padrão, o destino é:
 
-Se o usuário preferir deixar o iniciador junto dos outros aplicativos:
-
-```sh
-PATCH_PORTUGUESE_DEST="/Applications/Patch Portuguese - The Sims Naufragos.app" \
-  sh macos/install.sh
+```text
+~/Desktop/The Sims Naufragos PT.app
 ```
 
 ## Como desfazer
 
-Apague apenas o iniciador instalado. O jogo original não é modificado:
-
-```sh
-rm -rf "$HOME/Desktop/Patch Portuguese - The Sims Naufragos.app"
-```
+Apague apenas **The Sims Naufragos PT.app**. O jogo original não é modificado.
 
 ## Observações
 
-Este repositório contém apenas código de inicialização, o ícone e documentação.
-Cada usuário deve fornecer sua própria cópia do jogo e seus próprios recursos
-de idioma. O projeto não promete compatibilidade universal com todas as
-edições ou instaladores.
+Este projeto contém apenas o iniciador, o ícone e a documentação. Cada usuário
+deve fornecer sua própria cópia do jogo e seus próprios recursos de idioma. O
+projeto não promete compatibilidade universal com todas as edições.
