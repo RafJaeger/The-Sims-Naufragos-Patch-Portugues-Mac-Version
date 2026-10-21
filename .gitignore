@@ -1,0 +1,9 @@
+build/
+work/
+.DS_Store
+
+# O jogo e suas mídias não fazem parte deste repositório.
+*.dmg
+*.toast
+*.iso
+*.img
